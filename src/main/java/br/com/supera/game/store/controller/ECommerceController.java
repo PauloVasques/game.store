@@ -25,9 +25,27 @@ public class ECommerceController {
         return productService.findAll();
     }
 
+    @GetMapping("/products/sort/name")
+    public List<ProductEntity> sortProductsByName() {
+
+        return productService.sortByName();
+    }
+
+    @GetMapping("/products/sort/price")
+    public List<ProductEntity> sortByPrice() {
+        return productService.sortByPrice();
+    }
+
+    @GetMapping("/products/sort/score")
+    public List<ProductEntity> sortByScore() {
+        return productService.sortByScore();
+    }
+
     @GetMapping("/products/{id}")
     public Optional<ProductEntity> findById(@PathVariable Long id) {
 
         return productService.findById(id);
     }
+
+
 }

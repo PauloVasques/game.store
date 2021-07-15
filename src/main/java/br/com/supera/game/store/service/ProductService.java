@@ -19,8 +19,18 @@ public class ProductService {
     }
 
     public Optional<ProductEntity> findById(Long id) {
-
         return productRepository.findById(id);
     }
 
+    public List<ProductEntity> sortByName() {
+        return productRepository.sortByName();
+    }
+
+    public List<ProductEntity> sortByPrice() {
+        return productRepository.sortByPrice();
+    }
+
+    public List<ProductEntity> sortByScore() {
+        return productRepository.sortByScore();
+    }
 }
